@@ -14,6 +14,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 #define ACCEL_UPDATE_INTERVAL (0.5)
+#define SETTINGS_FILE @"/var/mobile/Library/Preferences/com.lodc.ios.faceoff.settings.plist"
 
 typedef uint32_t IOPMAssertionID;
 enum {
@@ -1047,16 +1048,10 @@ NSLog(@"FaceOff7: locking device");
 -(_Bool)attemptDeviceUnlockWithPassword:(id)arg1 appRequested:(_Bool)arg2
 {
     BOOL result = %orig;
-    
-     //NSLog(@"FaceOff7: attempting unlock %@, %@", wantsPassword ? @"wants passcode" : @"doesn't want passcode", overridePassword ? @"override" : @"no override");
 
-    //NSLog(@"FaceOff7: password: %@", arg1);
-    if (wantsPassword && overridePassword)
+    if (wantsPassword)
     {
-        //NSLog(@"FaceOff7: checking passwords");
-
-        NSString *settingsFile = @"/var/mobile/Library/Preferences/com.lodc.ios.faceoff.settings.plist";
-        NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsFile];
+        NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:SETTINGS_FILE];
         if (!prefs)
             prefs = [[NSMutableDictionary alloc] init];
 
@@ -1064,7 +1059,7 @@ NSLog(@"FaceOff7: locking device");
         {
             password = [arg1 retain];
             [prefs setObject:[[arg1 dataUsingEncoding:NSUTF8StringEncoding] AES256EncryptWithKey:getUDID()] forKey:@"devicePasscode"];
-            [prefs writeToFile:settingsFile atomically:YES];
+            [prefs writeToFile:SETTINGS_FILE atomically:YES];
             wantsPassword = NO;
             UIAlertView *alert = [[UIAlertView alloc]
 					initWithTitle:@"FaceOff7"
@@ -1078,27 +1073,14 @@ NSLog(@"FaceOff7: locking device");
         {
             NSData *passcodeData = [prefs[@"devicePasscode"] AES256DecryptWithKey:getUDID()];
             password = [[NSString stringWithUTF8String:[[[NSString alloc] initWithData:passcodeData encoding:NSUTF8StringEncoding] UTF8String]] retain];
-
-            BOOL doesPasscodeWork = %orig(password, arg2);
-            if (!doesPasscodeWork)
+            
+            if (result)
             {
-                if (!result)
-                {
-                    UIAlertView *alert = [[UIAlertView alloc]
-                        initWithTitle:@"FaceOff7"
-                        message:@"Old stored device passcode is incorrect. Please unlock the device with your passcode."
-                        delegate:nil
-                        cancelButtonTitle:@"OK"
-                        otherButtonTitles:nil];
-                    [alert show];
-                    password = nil;
-                    [prefs setObject:nil forKey:@"devicePasscode"];
-                }
-                else
+                if (password != arg1 && [arg1 isKindOfClass:[NSString class]])
                 {
                     password = [arg1 retain];
                     [prefs setObject:[[arg1 dataUsingEncoding:NSUTF8StringEncoding] AES256EncryptWithKey:getUDID()] forKey:@"devicePasscode"];
-                    [prefs writeToFile:settingsFile atomically:YES];
+                    [prefs writeToFile:SETTINGS_FILE atomically:YES];
                     wantsPassword = NO;
                 }
             }
@@ -1114,7 +1096,21 @@ NSLog(@"FaceOff7: locking device");
                 otherButtonTitles:nil];
             [alert show];
         }
+        //[prefs release];
     }
+    else
+    {
+        if (result && password != nil && password != arg1 && [arg1 isKindOfClass:[NSString class]])
+        {
+            NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:SETTINGS_FILE];
+            if (!prefs)
+                prefs = [[NSMutableDictionary alloc] init];
+            password = [arg1 retain];
+            [prefs setObject:[[arg1 dataUsingEncoding:NSUTF8StringEncoding] AES256EncryptWithKey:getUDID()] forKey:@"devicePasscode"];
+            [prefs writeToFile:SETTINGS_FILE atomically:YES];
+        }
+    }
+
 
     return result;
 }
