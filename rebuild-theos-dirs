@@ -1,0 +1,19 @@
+rm theos
+ln -s $THEOS theos
+
+cd faceoff7backboardhelper
+rm theos
+ln -s $THEOS theos
+cd ..
+
+cd faceoff7flipswitchtoggle
+rm theos
+ln -s $THEOS theos
+cd ..
+
+cd faceoff7settings
+rm theos
+ln -s $THEOS theos
+cd ..
+
+echo Done!

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Lock/Unlock Options</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>autoUnlock</string>
+			<key>label</key>
+			<string>Auto unlock</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>stayOnLSIfNotifications</string>
+			<key>label</key>
+			<string>Stay on LS if there are notifications</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>turnOnWhenPickedUp</string>
+			<key>label</key>
+			<string>Turn on when picked up</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>onlyTurnOnIfNotifications</string>
+			<key>label</key>
+			<string> - Only turn on if there are notifications</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>playLockSound</string>
+			<key>label</key>
+			<string>Play lock sounds</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>overridePassword</string>
+			<key>label</key>
+			<string>Override Password</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Overriding password requires you to enter the device passcode at least once, and again if it’s changed. The passcode is stored in the preference file (aes256 encrypted. other tweaks do this too) but it shouldn’t be a vulnerability unless you give someone full access to your device and they figure out how FaceOff7 encrypts it. Requires a respring to apply.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>If you have a password and ‘Auto unlock’ on but ‘Override Password’ off, you will get locked out of your device eventually due to failed passcode attempts. Please do not attempt that.</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Lock/Unlock Options</string>
+</dict>
+</plist>

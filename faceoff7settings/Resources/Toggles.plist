@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Toggles</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>silenceCalls</string>
+			<key>label</key>
+			<string>Silence Calls</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enableDND</string>
+			<key>label</key>
+			<string>Enable Do Not Disturb</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enableVibration</string>
+			<key>label</key>
+			<string>Enable Vibrate</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>disableVibration</string>
+			<key>label</key>
+			<string>Disable Vibrate</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enableAirplaneMode</string>
+			<key>label</key>
+			<string>Enable Airplane Mode</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enableAutolock</string>
+			<key>label</key>
+			<string>Enable Auto-Lock</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enableMute</string>
+			<key>label</key>
+			<string>Enable Mute</string>
+		</dict>
+                <dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>If enabled, all switches will be reverted to their previous states. If disabled, all switches will be turned to the opposite state (most of them disabled). </string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>revertSwitches</string>
+			<key>label</key>
+			<string>Revert Switches</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Toggles</string>
+</dict>
+</plist>

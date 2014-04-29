@@ -1,0 +1,10 @@
+{
+	entry = {
+		bundle = FaceOff7Settings;
+		cell = PSLinkCell;
+		detail = "FaceOff7SettingsListController";
+		icon = "FaceOff7Settings.png";
+		isController = 1;
+		label = "FaceOff 7";
+	};
+}

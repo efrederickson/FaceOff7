@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Disable System Sleep will prevent the system from sleeping, allowing a larger battery loss but lets FaceOff (among others) continue running and using the Accelerometer, Proximity Sensor, etc. Disable System Sleep with proximity will keep the system on ONLY when it was locked with the proximity sensor.</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enabled</string>
+			<key>label</key>
+			<string>Enabled</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>disableSystemSleep</string>
+			<key>label</key>
+			<string>Disable System Sleep</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>disableSystemSleepWithProx</string>
+			<key>label</key>
+			<string>Disable System Sleep with proximity</string>
+		</dict>
+                <dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>detectPocket</string>
+			<key>label</key>
+			<string>Detect in/out of pocket</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>detail</key>
+			<string>FOPocketSettingsListController</string>
+			<key>label</key>
+			<string>Pocket Settings</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enabledOnFaceDown</string>
+			<key>label</key>
+			<string>Enabled on face down</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enabledOnFaceUp</string>
+			<key>label</key>
+			<string>Enabled on face up</string>
+		</dict>
+		<!--<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>vibrateOnActivation</string>
+			<key>label</key>
+			<string>Vibrate on activation</string>
+		</dict>-->
+	        <dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enableSmartCover</string>
+			<key>label</key>
+			<string>Enable SmartCover (iPad)</string>
+		</dict>
+                <!-- <dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>overrideSmartCover</string>
+			<key>label</key>
+			<string>Override SmartCover (iPad)</string>
+		</dict> -->
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>useProximitySensor</string>
+			<key>label</key>
+			<string>Use proximity sensor (iPhone)</string>
+		</dict>
+		<!--<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>disableProxUntilMovement</string>
+			<key>label</key>
+			<string>Disable proximity until movement</string>
+		</dict> -->
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>disableProxLandscape</string>
+			<key>label</key>
+			<string>Disable proximity in landscape</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enableProxOnlyOnAC</string>
+			<key>label</key>
+			<string>Only enable proximity on AC</string>
+		</dict>
+		<!-- <dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>3</string>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>proxTimeout</string>
+			<key>label</key>
+			<string>Proximity movement timeout</string>
+			<key>validTitles</key>
+			<array>
+				<string>0 seconds</string>
+				<string>1 second</string>
+				<string>2 seconds</string>
+				<string>3 seconds</string>
+				<string>5 seconds</string>
+				<string>10 seconds</string>
+				<string>15 seconds</string>
+				<string>20 seconds</string>
+				<string>25 seconds</string>
+				<string>30 seconds</string>
+				<string>45 seconds</string>
+				<string>60 seconds</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>5</string>
+				<string>10</string>
+				<string>15</string>
+				<string>20</string>
+				<string>25</string>
+				<string>30</string>
+				<string>45</string>
+				<string>60</string>
+			</array>
+		</dict> -->
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>1</string>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>proxMode</string>
+			<key>label</key>
+			<string>Proximity mode</string>
+			<key>validTitles</key>
+			<array>
+				<string>Standard</string>
+				<string>On/Off (similar to WaveOff)</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>1</string>
+				<string>2</string>
+			</array>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>2</string>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>sensitivity</string>
+			<key>label</key>
+			<string>Sensitivity</string>
+			<key>validTitles</key>
+			<array>
+				<string>High</string>
+				<string>Normal</string>
+				<string>Low (more likely to turn off)</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+			</array>
+		</dict>
+		<!--<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>1</string>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>sensitivityForWake</string>
+			<key>label</key>
+			<string>Sensitivity for wake</string>
+			<key>validTitles</key>
+			<array>
+				<string>High</string>
+				<string>Normal</string>
+				<string>Low (more likely to turn on)</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>3</string>
+				<string>1</string>
+				<string>2</string>
+			</array>
+		</dict>-->
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>0</string>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>delay</string>
+			<key>label</key>
+			<string>Delay</string>
+			<key>validTitles</key>
+			<array>
+				<string>0 seconds</string>
+				<string>1 second</string>
+				<string>2 seconds</string>
+				<string>3 seconds</string>
+				<string>5 seconds</string>
+				<string>10 seconds</string>
+				<string>15 seconds</string>
+				<string>20 seconds</string>
+				<string>25 seconds</string>
+				<string>30 seconds</string>
+				<string>45 seconds</string>
+				<string>60 seconds</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>5</string>
+				<string>10</string>
+				<string>15</string>
+				<string>20</string>
+				<string>25</string>
+				<string>30</string>
+				<string>45</string>
+				<string>60</string>
+			</array>
+		</dict>
+                <dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>0</string>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>proxDelay</string>
+			<key>label</key>
+			<string>Proximity delay</string>
+			<key>validTitles</key>
+			<array>
+				<string>0 seconds</string>
+				<string>1 second</string>
+				<string>2 seconds</string>
+				<string>3 seconds</string>
+				<string>5 seconds</string>
+				<string>10 seconds</string>
+				<string>15 seconds</string>
+				<string>20 seconds</string>
+				<string>25 seconds</string>
+				<string>30 seconds</string>
+				<string>45 seconds</string>
+				<string>60 seconds</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>5</string>
+				<string>10</string>
+				<string>15</string>
+				<string>20</string>
+				<string>25</string>
+				<string>30</string>
+				<string>45</string>
+				<string>60</string>
+			</array>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>0</string>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>delayOnFaceUp</string>
+			<key>label</key>
+			<string>Delay on wake</string>
+			<key>validTitles</key>
+			<array>
+				<string>0 seconds</string>
+				<string>1 second</string>
+				<string>2 seconds</string>
+				<string>3 seconds</string>
+				<string>5 seconds</string>
+				<string>10 seconds</string>
+				<string>15 seconds</string>
+				<string>20 seconds</string>
+				<string>25 seconds</string>
+				<string>30 seconds</string>
+				<string>45 seconds</string>
+				<string>60 seconds</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>5</string>
+				<string>10</string>
+				<string>15</string>
+				<string>20</string>
+				<string>25</string>
+				<string>30</string>
+				<string>45</string>
+				<string>60</string>
+			</array>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>detail</key>
+			<string>FOTogglesListController</string>
+			<key>label</key>
+			<string>Toggles</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>disableOnAC</string>
+			<key>label</key>
+			<string>Disable on AC power</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>disableInCall</string>
+			<key>label</key>
+			<string>Disable in call</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>disableLSNotifications</string>
+			<key>label</key>
+			<string>Disable lighting up for LS notifications</string>
+		</dict> 
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enableWhileLocked</string>
+			<key>label</key>
+			<string>Enabled while locked</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>lockInstead</string>
+			<key>label</key>
+			<string>Lock instead of dim</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>detail</key>
+			<string>FOLockUnlockSettingsListController</string>
+			<key>label</key>
+			<string>Lock/Unlock options</string>
+		</dict>
+		<dict>
+			<key>ALAllowsSelection</key>
+			<string>1</string>
+			<key>ALChangeNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>ALSectionDescriptors</key>
+			<array>
+				<dict>
+					<key>cell-class-name</key>
+					<string>ALSwitchCell</string>
+					<key>icon-size</key>
+					<string>29</string>
+					<key>predicate</key>
+					<string>(isSystemApplication = TRUE)</string>
+					<key>suppress-hidden-apps</key>
+					<string>1</string>
+					<key>title</key>
+					<string>System Applications</string>
+				</dict>
+				<dict>
+					<key>cell-class-name</key>
+					<string>ALSwitchCell</string>
+					<key>icon-size</key>
+					<string>29</string>
+					<key>predicate</key>
+					<string>(isSystemApplication = FALSE)</string>
+					<key>suppress-hidden-apps</key>
+					<string>1</string>
+					<key>title</key>
+					<string>User Applications</string>
+				</dict>
+			</array>
+			<key>ALSettingsKeyPrefix</key>
+			<string>Blacklist-</string>
+			<key>ALSettingsPath</key>
+			<string>/var/mobile/Library/Preferences/com.lodc.ios.faceoff7.blacklist.plist</string>
+			<key>bundle</key>
+			<string>AppList</string>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>isController</key>
+			<true/>
+			<key>label</key>
+			<string>Disable in apps</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>disableInAllApps</string>
+			<key>label</key>
+			<string>Disable in all apps</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>disableOnHS</string>
+			<key>label</key>
+			<string>Disable on Homescreen</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>label</key>
+                        <string>Auto Dim Without Lock / Lockscreen Dim</string>
+                        <key>footerText</key>
+                        <string>Please respring after making changes, although it is not required to apply changes.</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>enableDimDelay</string>
+			<key>label</key>
+			<string>Enable dim delays</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>disableDimDelayOnAC</string>
+			<key>label</key>
+			<string>Disable dim delay on AC</string>
+		</dict>
+                <dict>
+                        <key>PostNotification</key>
+                        <string>com.lodc.ios.faceoff/reloadSettings</string>
+                        <key>cell</key>
+                        <string>PSEditTextCell</string>
+                        <key>default</key>
+                        <string>10</string>
+                        <key>defaults</key>
+                        <string>com.lodc.ios.faceoff.settings</string>
+                        <key>key</key>
+                        <string>autoDimDelay</string>
+                        <key>label</key>
+                        <string>Auto-Dim delay:</string>
+                </dict>
+                <dict>
+                        <key>PostNotification</key>
+                        <string>com.lodc.ios.faceoff/reloadSettings</string>
+                        <key>cell</key>
+                        <string>PSEditTextCell</string>
+                        <key>default</key>
+                        <string>20</string>
+                        <key>defaults</key>
+                        <string>com.lodc.ios.faceoff.settings</string>
+                        <key>key</key>
+                        <string>autoDimLSDelay</string>
+                        <key>label</key>
+                        <string>Lockscreen delay (8):  </string>
+                </dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.lodc.ios.faceoff/reloadSettings</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.lodc.ios.faceoff.settings</string>
+			<key>key</key>
+			<string>onlyLSDimDelayOnAC</string>
+			<key>label</key>
+			<string>Only change LS delay on AC</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>label</key>
+                        <string>Developer/other information</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>detail</key>
+			<string>FOHelpListController</string>
+			<key>label</key>
+			<string>FaceOff 7 Help</string>
+		</dict>
+                <dict>
+			<key>action</key>
+			<string>openTwitter</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>@mlnlover11 on Twitter</string>
+		</dict>
+                <dict>
+			<key>action</key>
+			<string>openGithub</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>@mlnlover11 on GitHub</string>
+		</dict>
+                <dict>
+			<key>action</key>
+			<string>sendEmail</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Contact developer via email</string>
+		</dict>
+                <dict>
+			<key>action</key>
+			<string>sendEmail_FR</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Feature request</string>
+		</dict>
+                <dict>
+			<key>action</key>
+			<string>donatePaypal</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Donate via Paypal</string>
+		</dict>
+                <dict>
+			<key>action</key>
+			<string>donateBitcoin</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Donate via Bitcoin</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Copyright (C) 2014 Elijah Frederickson</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>FaceOff 7</string>
+</dict>
+</plist>

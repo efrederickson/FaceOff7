@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Detect in/out of pocket does what it says. It will detect when it is placed vertically into or taken out of (vertically) a pocket, and will either turn the screen the screen off or lock. See “Pocket Settings” for more information.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Enabled on face up will turn the screen off and apply toggles when the screen is layed flat face up.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Enable SmartCover will apply FaceOff’s toggles when the iPad SmartCover is covering the screen.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Use proximity sensor will use the proximity sensor to turn the screen on/off and apply toggles or alternate actions.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Disable proximity in landscape will disable dimming with the proximity sensor in landscape mode. This makes it possible to type in landscape mode.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Only enable proximity on AC will enable the proximity sensor when on AC (charging) only</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Proximity mode is the way FaceOff handles proximity events. In standard mode, it will turn on/off with the proximity being covered/uncovered. For example: proximity covered; turn screen off. Proximity uncovered; turn screen on. On/Off mode will require one covering to turn off and one to turn back on. For example: proximity covered; turn screen off. Proximity uncovered; screen stays off. Proximity covered again; screen comes back on. </string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Sensitivity modifies how flat the device must be to turn on/off</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>The delay options will change a delay for turning the screen on/off. The proximity delay is independent of other delays. So if you had both a delay and a proximity delay it would wait both of those combined. However if you just had a proximity delay, it would not activate when the proximity sensor is covered until the delay has been fulfilled. </string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>The toggles page contains a list of toggles to apply when dimming. See that page for more information/a list of toggles</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Disable on AC will disable FaceOff when the device is on AC (charging)</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Disable lighting up for LS notifications will attempt to stop the lock screen from coming on when the device receives a notification. Also see my other tweak OnlyOneNotification ;)</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Enable while locked lets FaceOff run on the lock screen and while locked.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Lock/unlock options contains a list of options for modifying how FaceOff works when lock instead of dim is on.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>”Disable in apps” is a blacklist for apps not to run FaceOff in. The disable on homescreen/disable in all apps should not need much explanation, and they do not disable on the lock screen - just in what they say.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+                        <key>footerText</key>
+                        <string>Enable dim delays will enable both the Auto-Dim delay and the Lockscreen delay. Both of those delays have text entry fields, although please enter a number or SpringBoard may crash... The “(8)” next to the Lockscreen delay is the default lockscreen dim time. The disable/enable on AC toggles should be fairly self-explanatory =P.</string>
+		</dict>
+        </array>
+	<key>title</key>
+	<string>FaceOff 7 Help</string>
+</dict>
+</plist>

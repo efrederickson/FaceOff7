@@ -1,0 +1,9 @@
+Package: org.thebigboss.faceoff7
+Name: Face Off 7
+Depends: mobilesubstrate, com.a3tweaks.flipswitch, applist
+Version: 1.0.4
+Architecture: iphoneos-arm
+Description: Turn off the screen (and more!) when face down
+Maintainer: Elijah Frederickson
+Author: Elijah Frederickson
+Section: Tweaks
