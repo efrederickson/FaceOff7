@@ -4,6 +4,7 @@ THEOS_DEVICE_PORT=22
 
 include theos/makefiles/common.mk
 
+#CFLAGS = -fobjc-arc
 ARCHS = armv7 armv7s arm64
 
 TWEAK_NAME = FaceOff7
