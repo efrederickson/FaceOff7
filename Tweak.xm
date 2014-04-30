@@ -1,4 +1,4 @@
- #import "FSSwitchDataSource.h"
+#import "FSSwitchDataSource.h"
 #import "FSSwitchPanel.h"
 #import "FSSwitchState.h"
 #import <SpringBoardServices/SBSAccelerometer.h>
@@ -22,14 +22,14 @@ enum {
    kIOPMAssertionLevelOn = 255
 };
 typedef uint32_t IOPMAssertionLevel;
-IOReturn (*IOPMAssertionCreate)(CFStringRef, IOPMAssertionLevel, IOPMAssertionID *);
+IOReturn (*IOPMAssertionCreate)(CFStringRef, IOPMAssertionLevel, IOPMAssertionID*);
 IOReturn (*IOPMAssertionRelease)(IOPMAssertionID);
 
 // Required for the CoreTelephony notifications
 extern "C" id kCTCallStatusChangeNotification;
 extern "C" id kCTCallStatus;
-extern "C" id CTTelephonyCenterGetDefault( void );
-extern "C" void CTTelephonyCenterAddObserver( id, id, CFNotificationCallback, NSString *, void *, int );
+extern "C" id CTTelephonyCenterGetDefault(void);
+extern "C" void CTTelephonyCenterAddObserver(id, id, CFNotificationCallback, NSString *, void *, int);
 
 
 // INTERFACES / HEADER CRAP
@@ -322,7 +322,7 @@ static void reloadSettings(CFNotificationCenterRef center,
                                     CFDictionaryRef userInfo)
 {
     NSDictionary *prefs = [NSDictionary 
-        dictionaryWithContentsOfFile:@"/var/mobile/Library/Preferences/com.lodc.ios.faceoff.settings.plist"];
+        dictionaryWithContentsOfFile:SETTINGS_FILE];
 
     
     if ([prefs objectForKey:@"enabled"] != nil)
