@@ -94,6 +94,7 @@ extern "C" void CTTelephonyCenterAddObserver(id, id, CFNotificationCallback, NSS
 - (id)foregroundDisplayID;
 - (void)lockAndDimDevice;
 - (void)undimScreen;
+-(BOOL) deviceIsLocked;
 @end
 
 @interface SBLockScreenViewControllerBase
@@ -839,7 +840,8 @@ NSLog(@"FaceOff7: locking device");
                     [(SpringBoard*)[UIApplication sharedApplication] _lockButtonDownFromSource:1];
                     [(SpringBoard*)[UIApplication sharedApplication] _lockButtonUpFromSource:1];
                 }
-                disableLLSleep();
+                if (disableSystemSleep)
+                    disableLLSleep();
             }
             else if (inPocket && detectPocket && lockInPocket && unlockWhenOutOfPocket == NO)
             {
