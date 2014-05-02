@@ -834,8 +834,11 @@ NSLog(@"FaceOff7: locking device");
                 didILockIt = YES;
                 notify_post("com.lodc.ios.faceoff/didILockIt_on");
                 //[[%c(SBUserAgent) sharedUserAgent] lockAndDimDevice];
-[(SpringBoard*)[UIApplication sharedApplication] _lockButtonDownFromSource:1];
-[(SpringBoard*)[UIApplication sharedApplication] _lockButtonUpFromSource:1];
+                if (![[%c(SBUserAgent) sharedUserAgent] deviceIsLocked])
+                {
+                    [(SpringBoard*)[UIApplication sharedApplication] _lockButtonDownFromSource:1];
+                    [(SpringBoard*)[UIApplication sharedApplication] _lockButtonUpFromSource:1];
+                }
                 disableLLSleep();
             }
             else if (inPocket && detectPocket && lockInPocket && unlockWhenOutOfPocket == NO)
@@ -843,8 +846,11 @@ NSLog(@"FaceOff7: locking device");
                 didILockIt = NO;
                 notify_post("com.lodc.ios.faceoff/didILockIt_off");
                 //[[%c(SBUserAgent) sharedUserAgent] lockAndDimDevice];
-[(SpringBoard*)[UIApplication sharedApplication] _lockButtonDownFromSource:1];
-[(SpringBoard*)[UIApplication sharedApplication] _lockButtonUpFromSource:1];
+                if (![[%c(SBUserAgent) sharedUserAgent] deviceIsLocked])
+                {
+                    [(SpringBoard*)[UIApplication sharedApplication] _lockButtonDownFromSource:1];
+                    [(SpringBoard*)[UIApplication sharedApplication] _lockButtonUpFromSource:1];
+                }
             }
             else
             {
