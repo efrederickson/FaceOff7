@@ -3,3 +3,4 @@ _/
 obj/
 .theos/
 .DS_Store
+theos/
