@@ -790,11 +790,12 @@ y:(float)y
 {
 
     //NSLog(@"FaceOff7: enabled: %@", enabled ? @"yes": @"no");
-    if ( enabled == NO || 
+    if (enabled == NO ||
       (disableOnAC == YES && [[%c(SBUIController) sharedInstance] isOnAC]) ||
       (disableInCall && [[%c(SBTelephonyManager) sharedTelephonyManager] inCall]) ||
       (disableInAllApps && ![getCurrentApp() isEqual:@""]) ||
-      (disableOnHS && ([getCurrentApp() isEqual:@""] || [[%c(SBLockStateAggregator) sharedInstance] hasAnyLockState])) )
+      (disableOnHS && ([getCurrentApp() isEqual:@""] && ![[%c(SBLockStateAggregator) sharedInstance] hasAnyLockState])) 
+      )
     {
         delayBase = nil; unDelayBase = nil; proxDelayBase = nil;
         return;
@@ -896,7 +897,7 @@ NSLog(@"FaceOff7: locking device");
                         if ([li count] == 0)
                             return;
                     }
-
+                    
                     [(SpringBoard*)[UIApplication sharedApplication] _lockButtonDownFromSource:1];
                     [(SpringBoard*)[UIApplication sharedApplication] _lockButtonUpFromSource:1];
                 }
